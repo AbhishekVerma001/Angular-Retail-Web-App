@@ -83,7 +83,7 @@ export class CartService {
   }
 
   newTotalQuantity(totalQuantity:number){
-    this.totalPrice.next(totalQuantity);
+    this.totalQuantity.next(totalQuantity);
   }
 
 
