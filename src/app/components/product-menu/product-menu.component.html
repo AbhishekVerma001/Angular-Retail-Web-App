@@ -1,0 +1,23 @@
+<div class="menu-sidebar-content js-scrollbar1">
+    <nav class="navbar-sidebar">
+      <ul class="list-unstyled navbar-list">
+        <li>
+          <a routerLink="/category/Men" routerLinkActive="active-link" style="text-decoration: none">Men Products</a>
+        </li>
+        <li *ngFor="let category of productCategories">
+            <a routerLink="/category/Men/{{category.id}}" routerLinkActive="active-link"style="text-decoration: none">{{category.categoryName}}</a>
+          </li>
+          <li>
+            <a routerLink="/category/Women" routerLinkActive="active-link"style="text-decoration: none">Women Products</a>
+          </li>
+          <li *ngFor="let category of productCategories">
+            <a routerLink="/category/Women/{{category.id}}" routerLinkActive="active-link" style="text-decoration: none">{{category.categoryName}}</a>
+          </li>
+          <li><a *ngIf="!this.loginService.isUserLoggedIn()" routerLink="/signup" routerLinkActive="active-link" style="text-decoration: none">Sign up</a></li>
+          <li><a *ngIf="!this.loginService.isUserLoggedIn()" routerLink="/login" routerLinkActive="active-link" style="text-decoration: none">Log in</a></li>
+          <li><a *ngIf="this.loginService.isUserLoggedIn()"
+            (click)="logout()" routerLinkActive="active-link">Log out</a></li>
+      
+      </ul>
+    </nav>
+  </div>

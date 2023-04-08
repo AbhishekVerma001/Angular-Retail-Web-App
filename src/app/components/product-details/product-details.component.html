@@ -1,0 +1,61 @@
+<!-- <div class="detail-section">
+    <div class="container-fluid">
+        <img [src]="product?.imageUrl" class="detail-img">
+        <h3>{{product?.name}}</h3>
+        <div class="price">{{product?.unitPrice|currency:'INR'}}</div>
+        <a href="#" class="primary-btn">Add to cart</a>
+        <hr>
+        <h4>Product Type</h4>
+        <p>{{product?.description}}</p>
+        <hr>
+        <h4>Product Colour</h4>
+        <p>{{product?.colour}}</p>
+        <hr>
+        <h4>Usage</h4>
+        <p>{{product?.usage}}</p>
+        <hr>
+        <h4>Recommended For:</h4>
+        <p>{{product?.gender}}</p>
+    </div>
+</div> -->
+
+
+<section style="background-color: #eee;">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 col-xl-4">
+          <div class="card text-black">
+            <img  src="{{product?.imageUrl}}"
+              class="card-img-top" alt="{{product?.name}}" />
+            <div class="card-body">
+              <div class="text-center">
+                <h5 class="card-title">{{product?.name}}</h5>
+                <p class="text-muted mb-4">{{product?.unitPrice|currency:'INR'}}</p>
+              </div>
+              <div>
+                <div class="d-flex justify-content-between">
+                  <span>Product Type</span><span>{{product?.description}}</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Product Colour</span><span>{{product?.colour}}</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Usage</span><span>{{product?.product_usage}}</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span>Recommended For</span><span>{{product?.gender}}</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pb-2 mb-1">
+                  <button (click)="addToCart()" class="btn btn-primary btn-sm">Add to cart</button>
+                     <!-- <a style="text-decoration: none" href="#" class="primary-btn">Add to cart</a>  -->
+                    <a style="text-decoration: none" routerLink="/products" class="btn btn-primary btn-sm">Go Back</a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
